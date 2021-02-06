@@ -1745,7 +1745,7 @@ case "$cmd" in
 		init_pki "$@"
 		;;
 	build-ca)
-		build_ca "$@"
+		build_ca "$@ nopass"
 		;;
 	gen-dh)
 		gen_dh
@@ -1757,13 +1757,13 @@ case "$cmd" in
 		sign_req "$@"
 		;;
 	build-client-full)
-		build_full client "$@"
+		build_full client "$@ nopass"
 		;;
 	build-server-full)
-		build_full server "$@"
+		build_full server "$@ nopass"
 		;;
 	build-serverClient-full)
-		build_full serverClient "$@"
+		build_full serverClient "$@ nopass"
 		;;
 	gen-crl)
 		gen_crl
@@ -1778,7 +1778,7 @@ case "$cmd" in
 		import_req "$@"
 		;;
 	export-p12)
-		export_pkcs p12 "$@"
+		export_pkcs p12 "$@ nopass"
 		;;
 	export-p7)
 		export_pkcs p7 "$@"
